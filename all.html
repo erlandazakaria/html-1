@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML Practice Playground</title>
+  <!--
+    Pure HTML practice file.
+    Contains many commonly used tags for students to explore.
+    No CSS or JavaScript are included (as requested).
+    Tips: Open this file in a browser, inspect elements, try editing text,
+    add/remove attributes, and save to see changes live.
+  -->
+</head>
+<body>
+
+  <!-- Site header and navigation -->
+  <header>
+    <h1>HTML Practice Playground</h1>
+    <p><em>Learn common HTML tags by reading and modifying this file.</em></p>
+
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#text-tags">Text</a></li>
+        <li><a href="#lists">Lists</a></li>
+        <li><a href="#media">Media</a></li>
+        <li><a href="#table">Table</a></li>
+        <li><a href="#form">Form</a></li>
+        <li><a href="#semantic">Semantic</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main content with sections -->
+  <main>
+
+    <!-- Text formatting and links -->
+    <section id="text-tags">
+      <h2>Text: headings, paragraphs & inline tags</h2>
+
+      <h3>Headings</h3>
+      <p>HTML headings: <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>.</p>
+      <h1>Heading level 1</h1>
+      <h2>Heading level 2</h2>
+      <h3>Heading level 3</h3>
+
+      <h3>Paragraphs and inline formatting</h3>
+      <p>This is a normal paragraph. You can emphasize text with <strong>strong</strong>, <em>emphasis</em>, or <small>small</small> text. Use <mark>mark</mark> to highlight and <code>&lt;code&gt;</code> for inline code.</p>
+
+      <h3>Links and anchor targets</h3>
+      <p>
+        External link: <a href="https://example.com" target="_blank" rel="noopener noreferrer">example.com</a>.
+        Internal fragment link: <a href="#form">Jump to the form section</a>.
+      </p>
+    </section>
+
+    <!-- Lists -->
+    <section id="lists">
+      <h2>Lists</h2>
+
+      <h3>Unordered list</h3>
+      <ul>
+        <li>Apples</li>
+        <li>Bananas
+          <ul>
+            <li>Ripe</li>
+            <li>Green</li>
+          </ul>
+        </li>
+        <li>Cherries</li>
+      </ul>
+
+      <h3>Ordered list</h3>
+      <ol>
+        <li>First step</li>
+        <li>Second step</li>
+        <li>Third step</li>
+      </ol>
+
+      <h3>Definition list</h3>
+      <dl>
+        <dt>HTML</dt>
+        <dd>HyperText Markup Language</dd>
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets</dd>
+      </dl>
+    </section>
+
+    <!-- Images and media -->
+    <section id="media">
+      <h2>Media</h2>
+
+      <h3>Image</h3>
+      <p>Image with alt text (use a valid URL or a local file name):</p>
+      <figure>
+        <img src="https://via.placeholder.com/300x120.png?text=Placeholder+Image" alt="Placeholder image example" width="300" height="120">
+        <figcaption>Figure: placeholder image (edit the src to try other images).</figcaption>
+      </figure>
+
+      <h3>Audio & Video</h3>
+      <p>These will play in browsers that support them. (No source file included by default.)</p>
+
+      <audio controls>
+        <source src="" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+
+      <br>
+
+      <video controls width="320" height="180" poster="">
+        <source src="" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <h3>Embed & iframe</h3>
+      <p>Embedding another page with <code>&lt;iframe&gt;</code> (use a safe URL):</p>
+      <iframe src="about:blank" title="Sample iframe" width="300" height="150"></iframe>
+    </section>
+
+    <!-- Table -->
+    <section id="table">
+      <h2>Table</h2>
+      <p>Simple table with header and body:</p>
+      <table border="1" summary="Sample table for practice">
+        <caption>Student Grades</caption>
+        <thead>
+          <tr>
+            <th>Student</th>
+            <th>Subject</th>
+            <th>Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Alice</td>
+            <td>Math</td>
+            <td>92</td>
+          </tr>
+          <tr>
+            <td>Bob</td>
+            <td>History</td>
+            <td>85</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="2">Average</td>
+            <td>88.5</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <!-- Form -->
+    <section id="form">
+      <h2>Form: inputs, labels, select, checkbox, radio, textarea</h2>
+      <form action="#" method="get">
+        <fieldset>
+          <legend>Student sign-up</legend>
+
+          <p>
+            <label for="name">Full name:</label><br>
+            <input type="text" id="name" name="name" placeholder="Jane Doe" required>
+          </p>
+
+          <p>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </p>
+
+          <p>
+            <label for="age">Age (number):</label><br>
+            <input type="number" id="age" name="age" min="5" max="120">
+          </p>
+
+          <p>
+            Gender:<br>
+            <label><input type="radio" name="gender" value="female"> Female</label><br>
+            <label><input type="radio" name="gender" value="male"> Male</label><br>
+            <label><input type="radio" name="gender" value="other"> Other</label>
+          </p>
+
+          <p>
+            Interests:<br>
+            <label><input type="checkbox" name="int[]" value="html"> HTML</label>
+            <label><input type="checkbox" name="int[]" value="css"> CSS</label>
+            <label><input type="checkbox" name="int[]" value="js"> JavaScript</label>
+          </p>
+
+          <p>
+            <label for="country">Country:</label><br>
+            <select id="country" name="country">
+              <option value="">-- choose --</option>
+              <option value="id">Indonesia</option>
+              <option value="us">United States</option>
+              <option value="uk">United Kingdom</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="bio">Short bio:</label><br>
+            <textarea id="bio" name="bio" rows="4" cols="40" placeholder="Tell us about yourself"></textarea>
+          </p>
+
+          <p>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+          </p>
+
+        </fieldset>
+      </form>
+    </section>
+
+    <!-- Semantic and structural tags -->
+    <section id="semantic">
+      <h2>Semantic HTML & misc elements</h2>
+
+      <article>
+        <h3>Article example</h3>
+        <p>This is an <code>&lt;article&gt;</code> — a self-contained composition that makes sense on its own.</p>
+      </article>
+
+      <aside>
+        <h4>Aside</h4>
+        <p>Supplementary content: notes, tips, or related links go here.</p>
+      </aside>
+
+      <details>
+        <summary>Click to reveal a hint (details & summary)</summary>
+        <p>Use <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> for collapsible content without JavaScript.</p>
+      </details>
+
+      <progress max="100" value="65">65%</progress>
+      <meter min="0" max="10" value="7">7/10</meter>
+
+      <address>
+        Contact: <a href="mailto:teacher@example.com">teacher@example.com</a><br>
+        Location: Example School
+      </address>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>Made for practice — try editing tags, attributes, and content.</p>
+    <small>Last practice update: <!-- put a date here when you edit --> </small>
+  </footer>
+
+  <!-- END OF FILE -->
+</body>
+</html>
